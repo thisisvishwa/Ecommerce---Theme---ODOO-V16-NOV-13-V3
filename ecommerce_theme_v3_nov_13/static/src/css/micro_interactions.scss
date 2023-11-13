@@ -1,0 +1,36 @@
+```scss
+// Importing Variables
+@import "colors_typography.scss";
+
+// Micro-interactions for form submission
+.form-submit {
+  transition: all 0.3s ease-in-out;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($Accent, 0.5);
+  }
+}
+
+// Micro-interactions for adding items to the cart
+.add-to-cart {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: lighten($Secondary, 10%);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($Accent, 0.5);
+  }
+}
+```

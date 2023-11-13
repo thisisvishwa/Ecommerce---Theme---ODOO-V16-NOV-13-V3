@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="404_error_page" name="404 Error Page">
+        <div class="error-page">
+            <h1 class="error-code">404</h1>
+            <p class="error-message">Oops! The page you are looking for does not exist.</p>
+            <a href="/" class="btn btn-primary">Go to Homepage</a>
+        </div>
+    </template>
+
+    <template id="500_error_page" name="500 Error Page">
+        <div class="error-page">
+            <h1 class="error-code">500</h1>
+            <p class="error-message">Oops! Something went wrong on our end.</p>
+            <a href="/" class="btn btn-primary">Go to Homepage</a>
+        </div>
+    </template>
+</odoo>

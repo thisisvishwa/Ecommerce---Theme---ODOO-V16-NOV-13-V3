@@ -1,0 +1,48 @@
+<template id="product_detail_template">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <div id="image-gallery" class="container">
+                <!-- Image Gallery -->
+            </div>
+            <div id="specifications-tab" class="container">
+                <!-- Specifications Tab -->
+            </div>
+            <div id="reviews-ratings" class="container">
+                <!-- Reviews and Ratings -->
+            </div>
+        </div>
+    </t>
+</template>
+
+<record id="product_detail_view" model="ir.ui.view">
+    <field name="name">product.detail</field>
+    <field name="model">product.template</field>
+    <field name="arch" type="xml">
+        <t t-call="ecommerce_theme_v3_nov_13.product_detail_template">
+            <t t-foreach="product" t-as="p">
+                <div id="image-gallery">
+                    <t t-foreach="p.image_ids" t-as="image">
+                        <img t-att-src="image.url" class="product-image"/>
+                    </t>
+                </div>
+                <div id="specifications-tab">
+                    <t t-foreach="p.specification_ids" t-as="spec">
+                        <div class="specification">
+                            <h3 t-esc="spec.name"/>
+                            <p t-esc="spec.description"/>
+                        </div>
+                    </t>
+                </div>
+                <div id="reviews-ratings">
+                    <t t-foreach="p.review_ids" t-as="review">
+                        <div class="review">
+                            <h3 t-esc="review.user_id.name"/>
+                            <p t-esc="review.comment"/>
+                            <div class="rating" t-att-data-rating="review.rating"/>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </field>
+</record>

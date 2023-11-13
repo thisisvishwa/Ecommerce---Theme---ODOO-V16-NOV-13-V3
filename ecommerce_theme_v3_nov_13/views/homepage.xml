@@ -1,0 +1,41 @@
+```xml
+<odoo>
+    <data>
+        <!-- Homepage Template -->
+        <template id="homepage_template">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <!-- Navigation Bar -->
+                    <nav id="navbar">
+                        <!-- Navigation Bar Content Here -->
+                    </nav>
+
+                    <!-- Hero Section -->
+                    <section id="hero-section">
+                        <!-- Carousel Content Here -->
+                    </section>
+
+                    <!-- Featured Section -->
+                    <section id="featured-section">
+                        <!-- Grid Layout Content Here -->
+                    </section>
+                </div>
+            </t>
+        </template>
+
+        <!-- Homepage Action -->
+        <record id="action_homepage" model="ir.actions.act_url">
+            <field name="url">/</field>
+            <field name="target">self</field>
+        </record>
+
+        <!-- Homepage Menu -->
+        <record id="website.homepage" model="website.menu">
+            <field name="name">Home</field>
+            <field name="url">/</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">1</field>
+        </record>
+    </data>
+</odoo>
+```

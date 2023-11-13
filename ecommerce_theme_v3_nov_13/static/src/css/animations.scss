@@ -1,0 +1,20 @@
+@import 'colors_typography.scss';
+
+// Hover effect for buttons
+button:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: $Secondary;
+    color: $Primary;
+}
+
+// Hover effect for links
+a:hover {
+    transition: all 0.3s ease-in-out;
+    color: $Secondary;
+}
+
+// Hover effect for product images
+.product-image:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}

@@ -1,0 +1,34 @@
+```xml
+<odoo>
+    <data>
+        <!-- User Account Page -->
+        <record id="view_user_account" model="ir.ui.view">
+            <field name="name">user.account.view</field>
+            <field name="model">user.account</field>
+            <field name="arch" type="xml">
+                <form string="User Account">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                        </group>
+                        <notebook>
+                            <!-- Dashboard Tab -->
+                            <page string="Dashboard">
+                                <field name="order_history"/>
+                                <field name="wishlist"/>
+                                <field name="account_settings"/>
+                            </page>
+                            <!-- Gamification Tab -->
+                            <page string="Gamification">
+                                <field name="loyalty_points"/>
+                                <field name="badges"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
+```

@@ -1,0 +1,32 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Category Page -->
+        <record id="category_page_view" model="ir.ui.view">
+            <field name="name">category.page.view</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <div id="category-page">
+                    <!-- Navigation Bar -->
+                    <div id="navbar">
+                        <!-- Navbar code goes here -->
+                    </div>
+                    <!-- Advanced Filters -->
+                    <div id="advanced-filters">
+                        <!-- Advanced Filters code goes here -->
+                    </div>
+                    <!-- Sorting Options -->
+                    <div id="sorting-options">
+                        <!-- Sorting Options code goes here -->
+                    </div>
+                    <!-- Product Grid -->
+                    <div class="grid-layout">
+                        <!-- Product Grid code goes here -->
+                    </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>
+```

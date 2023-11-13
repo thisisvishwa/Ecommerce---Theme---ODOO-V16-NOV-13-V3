@@ -1,0 +1,80 @@
+$primary: #0D0D0D;
+$secondary: #15E8B5;
+$accent: #FF3E4D;
+$font-heading: 'Roboto Mono', sans-serif;
+$font-body: 'Arial', sans-serif;
+
+#navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: $primary;
+    color: $secondary;
+    font-family: $font-heading;
+
+    .nav-item {
+        margin-right: 20px;
+
+        &:hover {
+            color: $accent;
+            cursor: pointer;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: $primary;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+
+            .dropdown-item {
+                color: $secondary;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+
+                &:hover {
+                    background-color: $accent;
+                }
+            }
+        }
+
+        &:hover .dropdown-content {
+            display: block;
+        }
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        background-color: rgba($secondary, 0.1);
+        border-radius: 5px;
+        padding: 5px;
+
+        input {
+            border: none;
+            background-color: transparent;
+            color: $secondary;
+            font-family: $font-body;
+        }
+
+        button {
+            background-color: $accent;
+            border: none;
+            color: $primary;
+            padding: 5px 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($accent, 10%);
+            }
+        }
+    }
+}
